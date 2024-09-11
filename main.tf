@@ -92,7 +92,7 @@ resource "aws_instance" "webserver2" {
   instance_type           = "t2.micro"
   subnet_id               = aws_subnet.subnet2.id
   vpc_security_group_ids  = [aws_security_group.sg.id]
-  user_data               = base64encode(file("userdata1.sh")) 
+  user_data               = base64encode(file("userdata.sh")) 
 }
 
 
